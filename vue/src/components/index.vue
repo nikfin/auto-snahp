@@ -36,7 +36,7 @@
             <data>
               <div><p align="center"><img :src="data.poster" :title="data.title" width="300" /></p></div><br/>
 
-              <div><p align="center"><strong>{{ data.title }} ({{ data.start_year }})</strong></p></div><br/>
+              <div><p align="center"><strong>{{ data.title }} ({{ data.start_year || data.year }})</strong></p></div><br/>
 
               <div><strong>Summary:</strong> <em>{{ data.plot }}</em></div><br/>
 
