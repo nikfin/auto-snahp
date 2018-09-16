@@ -59,46 +59,46 @@
 </template>
 
 <script>
- import axios from 'axios'
- export default {
-   name: 'index',
-   data () {
-     return {
-       imdb: '',
-       data: {}
-     }
-   },
-   methods: {
-     getImdb: function (id) {
-       if (/^tt\d{7}$/.test(id)) {
-         axios.get(`http://localhost:3000/api/${id}`)
-            .then(res => {
-              console.log(res.data)
-              this.data = res.data
-            })
-       } else {
-         this.$vs.notify({
-           title: 'Error',
-           text: 'invalide IMDB ID',
-           color: 'danger'
-         })
-       }
-     },
+import axios from 'axios'
+export default {
+  name: 'index',
+  data () {
+    return {
+      imdb: '',
+      data: {}
+    }
+  },
+  methods: {
+    getImdb: function (id) {
+      if (/^tt\d{7}$/.test(id)) {
+        axios.get(`api/${id}`)
+          .then(res => {
+            console.log(res.data)
+            this.data = res.data
+          })
+      } else {
+        this.$vs.notify({
+          title: 'Error',
+          text: 'invalide IMDB ID',
+          color: 'danger'
+        })
+      }
+    },
 
-     copyContent: function () {
-       const copy = document.getElementsByTagName('data')[0].innerHTML
-          .replace(/ data-v-[\w\d]{8}=""/g, '')
+    copyContent: function () {
+      const copy = document.getElementsByTagName('data')[0].innerHTML
+        .replace(/ data-v-[\w\d]{8}=""/g, '')
 
-       this.$copyText(copy).then(() => {
-         this.$vs.notify({
-           title: `copied ${this.data.title}`,
-           text: 'copied to clipboard',
-           color: 'warning'
-         })
-       })
-     }
-   }
- }
+      this.$copyText(copy).then(() => {
+        this.$vs.notify({
+          title: `copied ${this.data.title}`,
+          text: 'copied to clipboard',
+          color: 'warning'
+        })
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>
