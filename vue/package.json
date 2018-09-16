@@ -11,8 +11,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "axios": "^0.18.0",
+    "material-icons": "^0.2.3",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-clipboard2": "^0.2.1",
+    "vue-router": "^3.0.1",
+    "vuesax": "^3.3.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
