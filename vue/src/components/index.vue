@@ -34,21 +34,19 @@
 
           <vs-card class="pb h">
             <data>
-              <div>
-                <p align="center"><img :src="data.poster" :title="data.title" width="300" /></p>
-              </div>
+              <div><p align="center"><img :src="data.poster" :title="data.title" width="300" /></p></div><br/>
 
-              <p align="center"><strong>{{ data.title }} ({{ data.start_year }})</strong></p>
+              <div><p align="center"><strong>{{ data.title }} ({{ data.start_year }})</strong></p></div><br/>
 
-              <strong>Summary:</strong> <em>{{ data.plot }}</em>
+              <div><strong>Summary:</strong> <em>{{ data.plot }}</em></div><br/>
 
-              <strong>Director:</strong> {{ data.director }}
-              <strong>Stars:</strong> {{ data.actors }}
+              <div><strong>Director:</strong> {{ data.director }}<br/>
+              <strong>Stars:</strong> {{ data.actors }}</div><br/>
 
-              <strong>Links:</strong> <a :href="`https://www.imdb.com/title/${data.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a>
+              <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${data.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a></div><br/>
 
-              <strong>Direct Download Links:</strong>
-              <a href="https://links.snahp.it/xxxx"><strong>Download from ZIPPYSHARE (Splits) - NO LIMITS</strong></a>
+              <div><strong>Direct Download Links:</strong><br/>
+              <a href="https://links.snahp.it/xxxx"><strong>Download from ZIPPYSHARE (Splits) - NO LIMITS</strong></a></div>
             </data>
           </vs-card>
 
