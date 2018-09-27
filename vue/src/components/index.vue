@@ -58,6 +58,7 @@
 
 <script>
 import axios from 'axios'
+import beautify from 'js-beautify'
 export default {
   name: 'index',
   data () {
@@ -84,8 +85,10 @@ export default {
     },
 
     copyContent: function () {
-      const copy = document.getElementsByTagName('data')[0].innerHTML
+      let copy = document.getElementsByTagName('data')[0].innerHTML
         .replace(/ data-v-[\w\d]{8}=""/g, '')
+
+      copy = beautify.html(copy)
 
       this.$copyText(copy).then(() => {
         this.$vs.notify({
