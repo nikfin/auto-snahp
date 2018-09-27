@@ -34,14 +34,25 @@
 
           <vs-card class="pb h">
             <data>
-              <div><p align="center"><img :src="data.poster" :title="data.title" width="300" /></p></div><br/>
+              <div>
+                <div>
+                  <p align="center"><img :src="data.poster" :title="data.title" width="300" /></p>
+                </div><br/>
 
-              <div><p align="center"><strong>{{ data.title }} ({{ data.start_year || data.year }})</strong></p></div><br/>
+                <div>
+                  <p align="center"><strong>{{ data.title }} ({{ data.start_year || data.year }})</strong></p>
+                </div><br/>
+              </div>
 
-              <div><strong>Summary:</strong> <em>{{ data.plot }}</em></div><br/>
-
-              <div><strong>Director:</strong> {{ data.director }}<br/>
-              <strong>Stars:</strong> {{ data.actors }}</div><br/>
+              <div>
+                <div><strong>Summary:</strong> {{ data.plot }}</div><br/>
+                <!-- <div><strong>Director:</strong> {{ data.director }}<div/> -->
+                <div><strong>Stars:</strong> {{ data.actors }}</div>
+                <div><strong>Rating:</strong> {{ data.rating }}/10</div>
+                <div><strong>Votes:</strong> {{ data.votes }}/10</div>
+                <div><strong>Genres:</strong> {{ data.genres }}</div>
+                <div><strong>Runtime:</strong> {{ data.runtime }}</div>
+              </div>
 
               <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${data.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a></div><br/>
 
