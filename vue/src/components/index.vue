@@ -46,10 +46,10 @@
 
               <div>
                 <div><strong>Summary:</strong> {{ data.plot }}</div><br/>
-                <!-- <div><strong>Director:</strong> {{ data.director }}<div/> -->
+                <div><strong>Director:</strong> {{ data.director }}<div/>
                 <div><strong>Stars:</strong> {{ data.actors }}</div>
                 <div><strong>Rating:</strong> {{ data.rating }}/10</div>
-                <div><strong>Votes:</strong> {{ data.votes }}/10</div>
+                <div><strong>Votes:</strong> {{ data.votes }}</div>
                 <div><strong>Genres:</strong> {{ data.genres }}</div>
                 <div><strong>Runtime:</strong> {{ data.runtime }}</div>
               </div>
