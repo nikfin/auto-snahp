@@ -30,7 +30,7 @@
 
       <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4"
         v-for="(result, index) in data.results" :key="index">
-        <a @click="copyContent()">
+        <a @click="copyContent(index)">
           <vs-card class="pb h">
             <data>
               <div>
@@ -53,7 +53,7 @@
                 <div><strong>Runtime:</strong> {{ result.runtime }}</div>
               </div>
 
-              <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${data.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a></div><br/>
+              <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${result.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a></div><br/>
 
               <div><strong>Direct Download Links:</strong><br/>
               <a href="https://links.snahp.it/xxxx"><strong>Download from ZIPPYSHARE (Splits) - NO LIMITS</strong></a></div>
@@ -86,15 +86,15 @@ export default {
         })
     },
 
-    copyContent: function () {
-      let copy = document.getElementsByTagName('data')[0].innerHTML
+    copyContent: function (index) {
+      let copy = document.getElementsByTagName('data')[index].innerHTML
         .replace(/ data-v-[\w\d]{8}=""/g, '')
 
       copy = beautify.html(copy)
 
       this.$copyText(copy).then(() => {
         this.$vs.notify({
-          title: `copied ${this.data.title}`,
+          title: `copied ${this.data.results[index].title}`,
           text: 'copied to clipboard',
           color: 'warning'
         })

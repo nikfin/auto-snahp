@@ -8,13 +8,18 @@ router.get('/', function (req, res, next) {
   res.sendFile(path.join(__dirname, '..', 'vue', 'dist', 'index.html'))
 })
 
-router.get('/api/:name', (req, res) => {
+router.get('/api/:id', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
 
-  const { name } = req.params
-  imdb.search({ name }, { apiKey: 'cc8d6e' })
-    .then(data => res.json(data))
+  const { id } = req.params
+  if (id)
+    if (/tt\d{7,8}/.test(id))
+      imdb.get({ id }, { apiKey: 'cc8d6e' })
+        .then(data => res.json({results: [data]}))
+      else
+        imdb.search({ name: id }, { apiKey: 'cc8d6e' })
+          .then(data => res.json(data))
 })
 
 module.exports = router
