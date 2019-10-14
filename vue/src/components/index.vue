@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     getImdb: function (search) {
-      axios.get(`api/${search}`)
+      axios.get(`api/${encodeURIComponent(search)}`)
         .then(res => {
           console.log(res.data)
           this.data = res.data

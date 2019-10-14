@@ -9,6 +9,11 @@ async function getImdbSearch (name) {
   return Promise.all(results.map(r => imdbClient.get({ id: r.imdbid })))
 }
 
+async function getImdb (_id) {
+  const [id] = _id.match(/tt\d{7,8}/)
+  return imdbClient.get({ id })
+}
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.sendFile(path.join(__dirname, '..', 'vue', 'dist', 'index.html'))
@@ -21,7 +26,7 @@ router.get('/api/:id', (req, res) => {
   const { id } = req.params
   if (id)
     if (/tt\d{7,8}/.test(id))
-      imdbClient.get({ id })
+      getImdb(id)
         .then(data => res.json({results: [data]}))
     else
       getImdbSearch(id)
