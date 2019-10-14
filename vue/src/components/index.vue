@@ -28,14 +28,14 @@
 
     <vs-row v-if="data" vs-justify="center">
 
-      <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="4"
+      <vs-col style="margin: 5px" vs-type="flex" vs-justify="center" vs-align="center" vs-w="4"
         v-for="(result, index) in data.results" :key="index">
         <a @click="copyContent(index)">
           <vs-card class="pb h">
             <data>
               <div>
                 <div>
-                  <p align="center"><img :src="result.poster" :title="result.title" width="300" /></p>
+                  <p align="center"><img :src="result.poster" :title="result.title" width="290" /></p>
                 </div><br/>
 
                 <div>

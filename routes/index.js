@@ -2,6 +2,12 @@ const path = require('path')
 const express = require('express')
 const router = express.Router()
 const imdb = require('imdb-api')
+const imdbClient = new imdb.Client({apiKey: 'cc8d6e'});
+
+async function getImdbSearch (name) {
+  const { results } = await imdbClient.search({ name })
+  return Promise.all(results.map(r => imdbClient.get({ id: r.imdbid })))
+}
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -15,11 +21,11 @@ router.get('/api/:id', (req, res) => {
   const { id } = req.params
   if (id)
     if (/tt\d{7,8}/.test(id))
-      imdb.get({ id }, { apiKey: 'cc8d6e' })
+      imdbClient.get({ id })
         .then(data => res.json({results: [data]}))
-      else
-        imdb.search({ name: id }, { apiKey: 'cc8d6e' })
-          .then(data => res.json(data))
+    else
+      getImdbSearch(id)
+        .then(results => res.json({results}))
 })
 
 module.exports = router
