@@ -4,7 +4,9 @@ const router = express.Router()
 const imdb = require('imdb-api')
 const imdbClient = new imdb.Client({apiKey: 'cc8d6e'});
 
-async function getImdbSearch (name) {
+async function getImdbSearch (_id) {
+  const name = unescape(_id)
+  console.log(name)
   const { results } = await imdbClient.search({ name })
   return Promise.all(results.map(r => imdbClient.get({ id: r.imdbid })))
 }
