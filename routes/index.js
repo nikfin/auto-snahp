@@ -8,7 +8,8 @@ async function getImdbSearch (_id) {
   const name = unescape(_id)
   console.log(name)
   const { results } = await imdbClient.search({ name })
-  return Promise.all(results.map(r => imdbClient.get({ id: r.imdbid })))
+  return Promise.all(results.map(r => r.type !== 'game' && imdbClient.get({ id: r.imdbid })))
+    .catch(console.error)
 }
 
 async function getImdb (_id) {
