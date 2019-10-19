@@ -12,7 +12,7 @@
             <p class="mb">I scrape IMDB for your lazy ass. Put an IMDB ID in the input below and i will create a html template for your shitty snahp.it post. have fun you fat fuck, suck a dick you pice of shit.</p>
             <!-- <vs-input vs-icon="fab fa-imdb" placeholder="IMDB ID" v-model="imdb"/> -->
             <vs-row vs-align="flex-start" vs-type="flex" vs-justify="center" vs-w="12">
-              <vs-input vs-icon="local_movies" vs-color="warning" placeholder="IMDB ID" v-model="imdb" />
+              <vs-input v-on:keyup.enter="getImdb(imdb)" vs-icon="local_movies" vs-color="warning" placeholder="IMDB ID" v-model="imdb" />
             </vs-row>
           </div>
           <div slot="footer">
