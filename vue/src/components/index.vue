@@ -35,7 +35,7 @@
             <data>
               <div>
                 <div>
-                  <p align="center"><img :src="result.poster" :title="result.title" width="290" /></p>
+                  <p align="center"><img :src="result.poster" :title="result.title" width="300" /></p>
                 </div><br/>
 
                 <div>
@@ -51,12 +51,14 @@
                 <div><strong>Votes:</strong> {{ result.votes }}</div>
                 <div><strong>Genres:</strong> {{ result.genres }}</div>
                 <div><strong>Runtime:</strong> {{ result.runtime }}</div>
-              </div>
+              </div><br/>
 
-              <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${result.imdbid}`">IMDB</a> - <a href="https://pastebin.com/xxxx">NFO</a></div><br/>
+              <div><strong>Links:</strong> <a :href="`https://www.imdb.com/title/${result.imdbid}`">IMDb</a></div><br/>
 
               <div><strong>Direct Download Links:</strong><br/>
-              <a href="https://links.snahp.it/xxxx"><strong>Download from ZIPPYSHARE (Splits) - NO LIMITS</strong></a></div>
+              <strong>Download from <font color="red">ZIPPYSHARE</font> (Splits) - NO LIMITS</strong><br/>
+              <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a><br/>
+              <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a></div>
             </data>
           </vs-card>
         </a>
