@@ -60,7 +60,7 @@
               <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a><br/>
               <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a></div>
               
-              <div><hr/><br/><strong><font color="red">Please Note</font></strong>:<br/>
+              <div><hr><br/><strong><font color="red">Please Note</font></strong>:<br/>
               <strong><font color="#BD00EB">1.</font></strong> If any <strong>password</strong> is required, it will be the domain of the site - <font color="purple"><strong>sn___.it</strong></font>.<br/>
               <strong><font color="#BD00EB">2.</font></strong> If you're taken to <strong>FileCrypt</strong> - please enter the password, solve the captcha and click on the download <strong>DLC button</strong> - <img src="https://i.imgur.com/2nYZEbE.png" width="50"><br />Use the DLC on <a href="https://links.snahp.it/eiYWPiVuPKkZltSoJl07anN63GpRftjL1FC"><strong>JDownloader2</strong></a> or <strong>dcrypt it</strong> to get access to the links.<br/>
               <strong><font color="#BD00EB">3.</font></strong> Please use the <strong>latest version</strong> of 7-Zip or WinRAR (<font color="purple"><strong>Windows</strong></font>), p7zip or unrar (<font color="purple"><strong>Linux</strong></font>) and Unarchiver or Keka (<font color="purple"><strong>Mac</strong></font>) to extract the files, depending on the file format.<br/><br/>
