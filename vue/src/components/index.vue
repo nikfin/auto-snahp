@@ -59,7 +59,7 @@
               <strong>Download from <font color="red">ZIPPYSHARE</font> (Splits) - NO LIMITS</strong><br/>
               <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a><br/>
               <a href="https://links.snahp.it/xxxxxx"><strong>RELEASE.NAME.HERE</strong></a></div><hr/><br/>
-              
+
               <div><strong><font color="red">Please Note</font></strong>:</div><br/>
               <div><strong><font color="#BD00EB">1.</font></strong> If any <strong>password</strong> is required, it will be the domain of the site - <font color="purple"><strong>sn___.it</strong></font>.</div><br/>
               <div><strong><font color="#BD00EB">2.</font></strong> If you're taken to <strong>FileCrypt</strong> - please enter the password, solve the captcha and click on the download <strong>DLC button</strong> - <img src="https://i.imgur.com/2nYZEbE.png" width="50"><br />Use the DLC on <a href="https://links.snahp.it/eiYWPiVuPKkZltSoJl07anN63GpRftjL1FC"><strong>JDownloader2</strong></a> or <strong>dcrypt it</strong> to get access to the links.</div><br/>
